@@ -1,134 +1,171 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+// Mobile Menu Toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMobileMenu = document.getElementById('close-mobile-menu');
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
 
-        // Close mobile menu when clicking on a nav link
-        const navItems = document.querySelectorAll('.nav-links a');
-        navItems.forEach(item => {
-            item.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
+closeMobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+
+// Navbar Scroll Effect
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('nav-scrolled');
+    } else {
+        navbar.classList.remove('nav-scrolled');
     }
+});
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Adjust for header height
-                    behavior: 'smooth'
-                });
-            }
-        });
+// Smooth Scrolling for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // Close mobile menu if open
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
     });
+});
 
-    // Header scroll effect
-    const header = document.querySelector('header');
-    if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.padding = '15px 0';
-                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-            }
-        });
-    }
+// Hero Text Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const heroTitle = document.getElementById('hero-title');
+    const heroTagline = document.getElementById('hero-tagline');
+    const heroSubtext = document.getElementById('hero-subtext');
+    const heroCta = document.getElementById('hero-cta');
+    
+    if (heroTitle) setTimeout(() => heroTitle.classList.add('animate'), 200);
+    if (heroTagline) setTimeout(() => heroTagline.classList.add('animate'), 600);
+    if (heroSubtext) setTimeout(() => heroSubtext.classList.add('animate'), 1000);
+    if (heroCta) setTimeout(() => heroCta.classList.add('animate'), 1400);
+});
 
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Basic form validation
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // In a real application, you would send this data to a server
-            // For this demo, we'll just show a success message
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
-        });
-    }
-
-    // Add animation to skill bars
-    function animateSkills() {
-        const skillLevels = document.querySelectorAll('.skill-level');
-        skillLevels.forEach(level => {
-            const width = level.style.width;
-            level.style.width = '0';
-            setTimeout(() => {
-                level.style.transition = 'width 1s ease-in-out';
-                level.style.width = width;
-            }, 100);
-        });
-    }
-
-    // Animate skills when they come into view
-    const skillsSection = document.querySelector('.skills');
-    if (skillsSection) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+// Lazy Load Images
+document.addEventListener('DOMContentLoaded', function() {
+    let lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+    
+    if ('IntersectionObserver' in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
-                    animateSkills();
-                    observer.unobserve(entry.target);
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove('lazy');
+                    lazyImageObserver.unobserve(lazyImage);
                 }
             });
-        }, { threshold: 0.2 });
+        });
         
-        observer.observe(skillsSection);
-    }
-
-    // Add animation to project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    if (projectCards.length > 0) {
-        const projectObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 200);
-                    projectObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        projectCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            projectObserver.observe(card);
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
         });
     }
 });
+
+// Filter Buttons for Events
+const filterButtons = document.querySelectorAll('.events-filter button');
+const eventCards = document.querySelectorAll('.event-card');
+
+if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            eventCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// Form Validation
+const forms = document.querySelectorAll('form');
+
+forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Basic form validation
+        let isValid = true;
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                isValid = false;
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+        
+        if (isValid) {
+            // Here you would typically send the form data to a server
+            alert('Form submitted successfully!');
+            form.reset();
+        }
+    });
+});
+
+// Tab switching functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const galleryGrids = document.querySelectorAll('.gallery-grid');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons and grids
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        galleryGrids.forEach(grid => grid.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding grid
+        button.classList.add('active');
+        const targetGrid = document.getElementById(`${button.dataset.tab}-grid`);
+        if (targetGrid) {
+            targetGrid.classList.add('active');
+            // Lazy load videos when video tab is active
+            if (button.dataset.tab === 'videos') {
+                lazyLoadVideos();
+            }
+        }
+    });
+});
+
+// Video lazy loading
+function lazyLoadVideos() {
+    const videos = document.querySelectorAll('video[data-src]');
+    videos.forEach(video => {
+        if (!video.src) {
+            const source = video.querySelector('source');
+            if (source) {
+                source.src = video.dataset.src;
+                video.load();
+            }
+        }
+    });
+}
