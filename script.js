@@ -169,3 +169,91 @@ function lazyLoadVideos() {
         }
     });
 }
+
+// Gallery Tab Switching
+document.addEventListener('DOMContentLoaded', function() {
+    const photosTab = document.getElementById('photos-tab');
+    const videosTab = document.getElementById('videos-tab');
+    const photosGrid = document.getElementById('photos-grid');
+    const videosGrid = document.getElementById('videos-grid');
+
+    if (photosTab && videosTab && photosGrid && videosGrid) {
+        photosTab.addEventListener('click', function() {
+            // Show photos, hide videos
+            photosGrid.classList.remove('hidden');
+            videosGrid.classList.add('hidden');
+            
+            // Update button styles
+            photosTab.classList.remove('bg-[#141414]');
+            photosTab.classList.add('bg-[#FF0266]');
+            videosTab.classList.remove('bg-[#FF0266]');
+            videosTab.classList.add('bg-[#141414]');
+        });
+
+        videosTab.addEventListener('click', function() {
+            // Show videos, hide photos
+            videosGrid.classList.remove('hidden');
+            photosGrid.classList.add('hidden');
+            
+            // Update button styles
+            videosTab.classList.remove('bg-[#141414]');
+            videosTab.classList.add('bg-[#FF0266]');
+            photosTab.classList.remove('bg-[#FF0266]');
+            photosTab.classList.add('bg-[#141414]');
+        });
+    }
+});
+
+// Video click-to-play functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const videos = document.querySelectorAll('#videos-grid video');
+    
+    videos.forEach(video => {
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                // Pause all other videos
+                videos.forEach(otherVideo => {
+                    if (otherVideo !== video) {
+                        otherVideo.pause();
+                    }
+                });
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    });
+});
+
+// Event filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const eventCards = document.querySelectorAll('.event-card');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('bg-[#FF0266]');
+                btn.classList.add('bg-[#141414]');
+            });
+            this.classList.remove('bg-[#141414]');
+            this.classList.add('bg-[#FF0266]');
+            
+            // Filter events
+            eventCards.forEach(card => {
+                const city = card.getAttribute('data-city');
+                
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                } else if (filter === city) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
