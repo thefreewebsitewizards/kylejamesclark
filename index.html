@@ -3,780 +3,858 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFIU EVENTS | Belfast | Home</title>
+    <title>DFIU EVENTS | Neon Nightlife Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen">
-    <nav id="navbar" class="fixed w-full z-50 py-1 px-6 lg:px-12 transition-all duration-300">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="#">
-                    <img src="assets/logo.png" alt="DFIU EVENTS Logo" class="h-[65px] object-contain">
-                </a>
+    <!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-opacity-0 z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <!-- Logo instead of text -->
+            <a href="#" class="flex items-center">
+                <img src="assets/logo.png" alt="DFIU Events Logo" class="h-16 w-auto">
+            </a>
+
+            <!-- Desktop navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-white hover:text-cyan-300 transition">Home</a>
+                <a href="#events" class="nav-link text-white hover:text-magenta-300 transition">Events</a>
+                <a href="#roster" class="nav-link text-white hover:text-purple-300 transition">Roster</a>
+                <a href="#gallery" class="nav-link text-white hover:text-green-300 transition">Gallery</a>
             </div>
-            
-            <div class="hidden md:flex items-center space-x-10">
-                <a href="#" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-xl font-medium">Home</a>
-                <a href="#roster" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-xl font-medium">Roster</a>
-                <a href="#gallery" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-xl font-medium">Gallery</a>
-                <a href="#events" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-xl font-medium">Events</a>
-            </div>
-            
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-2xl">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/dfiuevents/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-2xl">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
+
+            <!-- Mobile menu button -->
+        <button id="open-mobile-menu" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
+
         </div>
-    </nav>
-    
-    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-[#0A0A0A] z-40 pt-20 px-6 md:hidden">
-        <div class="flex flex-col space-y-10 text-center">
-            <a href="#" class="text-3xl text-white hover:text-[#FF0266] transition-colors duration-300 font-medium">Home</a>
-            <a href="#roster" class="text-3xl text-white hover:text-[#FF0266] transition-colors duration-300 font-medium">Roster</a>
-            <a href="#gallery" class="text-3xl text-white hover:text-[#FF0266] transition-colors duration-300 font-medium">Gallery</a>
-            <a href="#events" class="text-3xl text-white hover:text-[#FF0266] transition-colors duration-300 font-medium">Events</a>
-            
-            <div class="flex justify-center space-x-8 pt-10">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-3xl">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/dfiuevents/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#FF0266] transition-colors duration-300 text-3xl">
-                    <i class="fab fa-instagram"></i>
-                </a>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+        <div id="particles-js"></div>
+        <div class="container mx-auto px-6 py-10 z-10">
+            <div class="hero-content flex flex-wrap items-center">
+                <!-- Event Poster -->
+                <div class="event-poster w-full md:w-1/2 lg:w-2/5 mb-10 md:mb-0">
+                    <div class="neon-card p-2 rounded-lg" style="background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));">
+                        <div class="rounded-lg overflow-hidden">
+                            <img src="assets/events/12.jpg" alt="Haus of Aja Australia Tour" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Details -->
+                <div class="event-details w-full md:w-1/2 lg:w-3/5 md:pl-12">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 neon-heading neon-purple">Haus of Aja</h1>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 neon-heading neon-cyan">Australia Tour 2025</h2>
+                    <div class="mb-6">
+                        <p class="text-gray-400 mb-2">DATES & CITIES</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-lg">
+                            <p class="neon-cyan">Melbourne — Nov 20</p>
+                            <p class="neon-magenta">Adelaide — Nov 21</p>
+                            <p class="neon-purple">Sydney — Nov 22</p>
+                            <p class="neon-green">Brisbane — Nov 23</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center mb-6 gap-6">
+                        <div>
+                            <p class="text-gray-400">PRICE</p>
+                            <p class="text-xl neon-cyan">From £27.80</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">AGE</p>
+                            <p class="text-xl neon-magenta">All Ages</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Join us at DFIU Events Presents: Haus of Aja in Australia for a night of fierce performances and fabulous drag!
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.itdevents.com/" target="_blank" class="neon-btn px-8 py-3 rounded-full bg-transparent border border-cyan-400 text-white font-bold hover:bg-cyan-400 hover:text-black">
+                            GET TICKETS
+                        </a>
+                        <a href="#events" class="neon-btn px-8 py-3 rounded-full bg-transparent border border-purple-400 text-white font-bold hover:bg-purple-400 hover:text-black">
+                            VIEW ALL EVENTS
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center neon-heading neon-cyan">UPCOMING EVENTS</h2>
             
-            <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-2xl">
-                <i class="fas fa-times"></i>
-            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="neon-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/events/16.jpg" alt="Lydia B Kollins Manchester" class="w-full h-120 object-cover">
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-full text-sm neon-cyan">
+                            SEP 10
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 neon-cyan">Lydia B Kollins</h3>
+                        <p class="text-gray-400 mb-2">Manchester • Cruz 101</p>
+                        <p class="text-gray-400 mb-2">From £22.38 • Ages 18+</p>
+                        <p class="text-gray-300 mb-4">Get ready, UK! The fierce, fabulous, and unforgettable Lydia B. Kollins from RuPaul’s Drag Race is storming the stage with a show that’s louder, prouder, and pinker than ever before!</p>
+                        <button class="event-details-btn neon-btn w-full py-2 rounded-full bg-transparent border border-cyan-400 text-white hover:bg-cyan-400 hover:text-black" data-event="1">
+                            DETAILS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="neon-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/events/15.jpg" alt="Lydia B Kollins Glasgow" class="w-full h-120 object-cover">
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-full text-sm neon-magenta">
+                            SEP 9
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 neon-magenta">Lydia B Kollins</h3>
+                        <p class="text-gray-400 mb-2">Glasgow • The Corset Club</p>
+                        <p class="text-gray-400 mb-2">From £22.38 • Ages 18+</p>
+                        <p class="text-gray-300 mb-4">Get ready, UK! The fierce, fabulous, and unforgettable Lydia B. Kollins from RuPaul’s Drag Race is storming the stage with a show that’s louder, prouder, and pinker than ever before!</p>
+                        <button class="event-details-btn neon-btn w-full py-2 rounded-full bg-transparent border border-cyan-400 text-white hover:bg-cyan-400 hover:text-black" data-event="2">
+                            DETAILS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="neon-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-magenta-500/50">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/events/14.jpeg" alt="Lydia B Kollins Glasgow" class="w-full h-120 object-cover">
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-full text-sm neon-green">
+                            SEP 8
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 neon-green">Lydia B Kollins</h3>
+                        <p class="text-gray-400 mb-2">Glasgow • The Corset Club</p>
+                        <p class="text-gray-400 mb-2">From £22.38 • Ages 18+</p>
+                        <p class="text-gray-300 mb-4">Get ready, UK! The fierce, fabulous, and unforgettable Lydia B. Kollins from RuPaul’s Drag Race is storming the stage with a show that’s louder, prouder, and pinker than ever before!</p>
+                        <button class="event-details-btn neon-btn w-full py-2 rounded-full bg-transparent border border-cyan-400 text-white hover:bg-cyan-400 hover:text-black" data-event="3">
+                            DETAILS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="neon-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50">
+                <div class="relative overflow-hidden">
+                    <img src="assets/events/12.jpg" alt="Haus of Aja Australia Tour" class="w-full h-120 object-cover">
+                    <div class="absolute top-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-full text-sm neon-cyan">
+                    NOV 20-23
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 neon-cyan">Haus of Aja</h3>
+                    <p class="text-gray-400 mb-4">Australia Tour</p>
+                    <p class="text-gray-400 mb-2">Ages 18+</p>
+                    <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Australia for a night of fierce performances and fabulous drag!</p>
+                    <button class="event-details-btn neon-btn w-full py-2 rounded-full bg-transparent border border-cyan-400 text-white hover:bg-cyan-400 hover:text-black" data-event="4">
+                    DETAILS
+                    </button>
+                </div>
+                </div>
+            
+                <!-- Event 5 -->
+                <div class="neon-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50">
+                <div class="relative overflow-hidden">
+                    <img src="assets/events/11.jpg" alt="Haus of Aja Amsterdam" class="w-full h-120 object-cover">
+                    <div class="absolute top-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-full text-sm neon-magenta">AUG 24</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 neon-magenta">Haus of Aja</h3>
+                    <p class="text-gray-400 mb-4">Amsterdam</p>
+                    <p class="text-gray-400 mb-2">From £14.25 • 2 for 1 deal • Ages 18+</p>
+                    <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
+                    <button class="event-details-btn neon-btn w-full py-2 rounded-full bg-transparent border border-cyan-400 text-white hover:bg-cyan-400 hover:text-black" data-event="5">DETAILS</button>
+                </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="neon-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-magenta-500/50">
+                <div class="relative overflow-hidden">
+                    <img src="assets/events/10.jpg" alt="Haus of Aja Bologna" class="w-full h-120 object-cover">
+                    <div class="absolute top-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-full text-sm neon-green">AUG 23</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 neon-green">Haus of Aja</h3>
+                    <p class="text-gray-400 mb-4">Bologna</p>
+                    <p class="text-gray-400 mb-2">From £14.25 • 2 for 1 deal • Ages 18+</p>
+                    <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
+                    <button class="event-details-btn neon-btn w-full py-2 rounded-full bg-transparent border border-cyan-400 text-white hover:bg-cyan-400 hover:text-black" data-event="6">DETAILS</button>
+                </div>
+                </div>
+            </div>
+    </div>
+
+        <!--<div class="text-center mt-12">
+                <button class="neon-btn px-8 py-3 rounded-full bg-transparent border border-white text-white font-bold hover:bg-white hover:text-black">
+                    LOAD MORE EVENTS
+                </button>
+            </div>
+        </div>-->
+    </section>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="modal fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
+        <div class="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-white text-2xl z-50">&times;</button>
+            <div class="p-6">
+                <div class="relative h-120 mb-6 rounded-lg overflow-hidden">
+                    <img id="modal-image" src="" alt="Event" class="w-full h-full object-cover">
+                </div>
+                <h2 id="modal-title" class="text-3xl font-bold mb-2 neon-cyan"></h2>
+                <p id="modal-date" class="text-gray-400 mb-4"></p>
+                <p id="modal-description" class="text-gray-300 mb-6"></p>
+                
+                <h3 class="text-xl font-bold mb-4 neon-purple">LINEUP</h3>
+                <div id="modal-lineup" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <!-- Lineup will be inserted here by JS -->
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button class="neon-btn flex-1 py-3 rounded-full bg-transparent border border-cyan-400 text-white hover:bg-cyan-400 hover:text-black">
+                        GET TICKETS
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-50 hero-overlay"></div>
-        
-        <div class="bubble-container">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
+    <!-- Roster Section -->
+    <section id="roster" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center neon-heading neon-magenta">OUR ROSTER</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center neon-heading neon-magenta">BOOKING INQUIRES: BOOKINGS@DFIUEVENTS.COM</h2>
+            <div id="rosterGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Flip Cards -->
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-purple-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-purple-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/bagachipz.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-purple">BAGA CHIPZ</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-purple-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-purple">Baga Chipz MBE</h3>
+                            <h3 class="text-m mb-2 neon-purple">Public Figure</h3>
+                            <p class="text-white-300 text-center mb-4"><br>Tart of stage and screen<br>Obsessed with Soaps, Reba, Bingo & Four in a Bed</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-purple-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#9b5cff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-cyan-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-cyan-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/a'whora.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-cyan">A'WHORA</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-cyan-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-cyan">A'WHORA</h3>
+                            <h3 class="text-m mb-2 neon-cyan">Public Figure</h3>
+                            <p class="text-white-300 text-center mb-4"><br>Beauty • Fashion • Camp</p>
+                            <p class="text-white-300 text-center mb-0">🎤 LIVE – @dfiuevents</p>
+                            <p class="text-white-300 text-center mb-4">❤️ BOY – @georgejamesboyle</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-cyan-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#00f0ff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-magenta-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-magenta-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/sapphire.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-magenta">SAPPHIRE</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-magenta-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-magenta">SAPPHIRE</h3>
+                            <h3 class="text-m mb-2 neon-magenta">Musician</h3>
+                            <p class="text-white-300 text-center mb-4"><br>Stokie Showgirl</p>
+                            <p class="text-white-300 text-center mb-4">Available now for nightclubs, weddings, birthdays, funerals, and Christmas parties</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-magenta-400 hover:text-magenta-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#ff2bd6]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-green-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-green-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/chaneldior.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-green">CHANEL DIOR</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-green-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-green">CHANEL DIOR</h3>
+                            <h3 class="text-m mb-2 neon-green">Artist</h3>
+                            <p class="text-white-300 text-center mb-4"><br>UK Drag Queen / Performer</p>
+                            <p class="text-white-300 text-center mb-4">📱 TikTok – @thechaneldior (344k+)</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-green-400 hover:text-green-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#39ff14]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-purple-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-purple-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/destinydyson.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-purple">DESTINY DYSON</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-purple-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-purple">DESTINY DYSON</h3>
+                            <p class="text-white-300 text-center mb-4"><br>If you don’t like dogs, we can’t be friends 🐶</p>
+                            <p class="text-white-300 text-center mb-4">📱 TikTok – @IAmDestinyDyson</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-purple-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#9b5cff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-cyan-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-cyan-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/TailorMaid.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-cyan">TAILOR MAID</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-cyan-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-cyan">TAILOR MAID</h3>
+                            <h3 class="text-m mb-2 neon-cyan">Artist</h3>
+                            <p class="text-white-300 text-center mb-4"><br>Host • Entertainer • Performer @dfiuevents</p>
+                            <p class="text-white-300 text-center mb-4">📺 Catch me on @bbciplayer – Made Up in Belfast</p>
+                            <p class="text-white-300 text-center mb-4">👑 UK Drag Daughter of @sashacolby</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-cyan-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#00f0ff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-magenta-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-magenta-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/dannybeard.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-magenta">DANNY BEARD</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-magenta-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-magenta">DANNY BEARD</h3>
+                            <h3 class="text-m mb-2 neon-magenta">Shady, Singing, Clown!</h3>
+                            <p class="text-white-300 text-center mb-4"><br>Presenter • Podcaster • Drag Queen</p>
+                            <p class="text-white-300 text-center mb-0">🎙️ Host – @gossipgayspod</p>
+                            <p class="text-white-300 text-center mb-0">👑 Winner – @dragraceukbbc</p>
+                            <p class="text-white-300 text-center mb-4">⭐ Celebrity – @bbuk</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-magenta-400 hover:text-magenta-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#ff2bd6]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-green-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-green-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/hannahconda.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-green">HANNAH CONDA</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-green-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-green">HANNAH CONDA</h3>
+                            <h3 class="text-m mb-2 neon-green">Artist</h3>
+                            <p class="text-white-300 text-center mb-4"><br>🥈 Professional Runner-Up</p>
+                            <p class="text-white-300 text-center mb-0">🌏 Runner-Up – UK vs The World S2</p>
+                            <p class="text-white-300 text-center mb-4">💖 Runner-Up – RuPaul’s Drag Race Down Under S2</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-green-400 hover:text-green-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#39ff14]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-purple-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-purple-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/krystalversace.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-center neon-purple">KRYSTAL VERSACE</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-purple-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 text-center neon-purple">KRYSTAL VERSACE</h3>
+                            <h3 class="text-m mb-2 text-center neon-purple">Public Figure</h3>
+
+                            <p class="text-white-300 text-center mb-4"><br>English Drag Queen</p>
+                            <p class="text-white-300 text-center mb-4">The Face<br>Youngest winner of Drag Race</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-purple-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#9b5cff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-cyan-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-cyan-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/paigethree.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-cyan">PAIGE THREE</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-cyan-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-cyan">PAIGE THREE</h3>
+                            <h3 class="text-m mb-2 neon-cyan">Artist & Entertainer</h3>
+                            <p class="text-white-300 text-center mb-4"><br>Headline Maker • Tabloid Star • Host • Colby</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-cyan-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#00f0ff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-magenta-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-magenta-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/kweenkong.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-magenta">KWEEN KONG</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-magenta-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-magenta">KWEEN KONG</h3>
+                            <h3 class="text-m mb-2 neon-magenta">Artist</h3>
+                            <p class="text-white-300 text-center mb-4"><br>RuPaul’s Global All Stars🌟</p>
+                            <p class="text-white-300 text-center mb-0">RuPaul’s Drag Race DU S2 🏁</p>
+                            <p class="text-white-300 text-center mb-0">Logie Nominated 🙏🏾</p>
+                            <p class="text-white-300 text-center mb-0">Fa’afafine 🇼🇸🇹🇴</p>
+                            <p class="text-white-300 text-center mb-4">Iman 🏆</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-magenta-400 hover:text-magenta-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#ff2bd6]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-green-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-green-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/gothykendoll.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-green">GOTHY KENDOLL</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-green-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-green">GOTHY KENDOLL</h3>
+                            <h3 class="text-m mb-2 neon-green">DJ</h3>
+                            <p class="text-white-300 text-center mb-4"><br>DJ • Gemini • Manchester</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-green-400 hover:text-green-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#39ff14]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-purple-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-purple-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/dahliasin.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-purple">DAHLIA SIN</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-purple-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-purple">DAHLIA SIN</h3>
+                            <h3 class="text-m mb-2 neon-purple">Public Figure</h3>
+                            <p class="text-white-300 text-center mb-4"><br>THE ONLY BRATZ DOLL • NYC • LA</p>
+                            <p class="text-white-300 text-center mb-4">🏁 RuPaul’s Drag Race S12</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-purple-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#9b5cff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card roster-card">
+                    <div class="flip-card-inner bg-gray-900 rounded-lg">
+                        <div class="flip-card-front flex flex-col items-center justify-center p-6 border border-cyan-500 rounded-lg">
+                            <div class="w-60 h-80 rounded-full border-4 border-cyan-500 mb-4 overflow-hidden">
+                                <img src="assets/roster/charratea.png" alt="Roster" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold neon-cyan">CHARRA TEA</h3>
+                            <p class="text-gray-400">DRAG QUEEN</p>
+                        </div>
+                        <div class="flip-card-back bg-gray-800 p-6 border border-cyan-500 rounded-lg flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-bold mb-2 neon-cyan">CHARRA TEA</h3>
+                            <h3 class="text-m mb-2 neon-cyan">Artist</h3>
+                            <p class="text-white-300 text-center mb-4"><br>🏁 Drag Race UK S6</p>
+                            <p class="text-white-300 text-center mb-4">📩 Bookings – bookings@dfiuevents.com</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-cyan-400 hover:text-cyan-200 transition">
+                                    <!-- Neon Crown Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="w-6 h-6 drop-shadow-[0_0_6px_#00f0ff]" 
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 20h14l-1-6 4-7-6 2-4-5-4 5-6-2 4 7-1 6zM4 22h16v2H4z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-        
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <h1 id="hero-title" class="hero-text text-5xl md:text-7xl lg:text-8xl font-bold mb-4 uppercase neon-text">
-                DFIU <span class="glitch-effect">EVENTS</span>
-            </h1>
-            <p id="hero-tagline" class="hero-text text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto">
-                Unleashing Sound. Uniting Cities.
-            </p>
-            <p id="hero-subtext" class="hero-text text-base md:text-lg mb-12 opacity-80 max-w-2xl mx-auto">
-                All booking inquiries email: booking@dfiuevents.com
-            </p>
-            <a id="hero-cta" href="#events" class="hero-text inline-block gradient-btn text-black font-bold py-3 px-8 rounded-full text-lg uppercase tracking-wider">
-                See Events
-            </a>
-        </div>
-        
-        <div class="absolute bottom-10 left-0 right-0 text-center">
-            <a href="#roster" class="inline-block animate-bounce">
-                <i class="fas fa-chevron-down text-white text-2xl"></i>
-            </a>
-        </div>
-    </section>
-    
-    <section id="roster" class="py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0266] to-[#14FFEC]">Our</span> Roster
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/bagachipz.png" alt="Baga Chipz" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Baga Chipz</h3>
-                    </div>
-                </div>
-                
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/a'whora.png" alt="A'Whora" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">A'Whora</h3>
-                    </div>
-                </div>
-                
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/sapphire.png" alt="Sapphire" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Sapphire</h3>
-                    </div>
-                </div>
-                
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/chaneldior.png" alt="Chanel Dior" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Chanel Dior</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/destinydyson.png" alt="Destiny Dyson" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Destiny Dyson</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/tailormaid.png" alt="Tailor Maid" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Tailor Maid</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/dannybeard.png" alt="Danny Beard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Danny Beard</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/hannahconda.png" alt="Hannah Conda" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Hannah Conda</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/krystalversace.png" alt="Krystal Versace" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Krystal Versace</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/paigethree.png" alt="Paige Three" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Paige Three</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/kweenkong.png" alt="Kween Kong" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Kween Kong</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/gothykendoll.png" alt="Gothy Kendoll" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Gothy Kendoll</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/dahliasin.png" alt="Dahlia Sin" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Dahlia Sin</h3>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover">
-                    <div class="relative overflow-hidden h-[32rem]">
-                        <img src="assets/roster/charratea.png" alt="Charra Tea" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Charra Tea</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="gallery" class="py-20 px-6 bg-[#141414]">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
-                Event <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0266] to-[#14FFEC]">Gallery</span>
-            </h2>
-            
-            <div class="flex justify-center mb-12">
-                <div class="inline-flex rounded-md shadow-sm" role="group">
-                    <button type="button" id="photos-tab" class="px-6 py-3 text-sm font-medium rounded-l-lg bg-[#FF0266] text-white transition-colors duration-300">
-                        Photos
-                    </button>
-                    <button type="button" id="videos-tab" class="px-6 py-3 text-sm font-medium rounded-r-lg bg-[#141414] text-white hover:bg-[#FF0266] transition-colors duration-300">
-                        Videos
-                    </button>
-                </div>
-            </div>
-            
-            <div id="photos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="relative group overflow-hidden rounded-lg">
-                    <img src="assets/photos/1.jpg" alt="ANETRA UK/EU Tour" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">ANETRA UK/EU Tour Complete</h3>
-                            <p class="text-[#14FFEC]">May 17, 2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative group overflow-hidden rounded-lg">
-                    <img src="assets/photos/2.jpg" alt="ANETRA UK/EU Tour" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">ANETRA UK/EU Tour Complete</h3>
-                            <p class="text-[#14FFEC]">May 17, 2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative group overflow-hidden rounded-lg">
-                    <img src="assets/photos/3.jpg" alt="ANETRA UK/EU Tour" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">ANETRA UK/EU Tour Complete</h3>
-                            <p class="text-[#14FFEC]">May 17, 2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="relative group overflow-hidden rounded-lg">
-                    <img src="assets/photos/4.jpg" alt="DFIU Events Angels" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">DFIU Events Angels</h3>
-                            <p class="text-[#14FFEC]">May 22, 2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative group overflow-hidden rounded-lg">
-                    <img src="assets/photos/5.jpg" alt="The Tour Blues" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">The Tour Blues</h3>
-                            <p class="text-[#14FFEC]">May 25, 2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative group overflow-hidden rounded-lg">
-                    <img src="assets/photos/6.jpg" alt="Anetra" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Anetra</h3>
-                            <p class="text-[#14FFEC]">May 10, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="videos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
-                <div class="relative group overflow-hidden rounded-lg">
-                    <video class="w-full h-[32rem] object-cover cursor-pointer" preload="metadata">
-                        <source src="assets/videos/video1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            
-                <div class="relative group overflow-hidden rounded-lg">
-                    <video class="w-full h-[32rem] object-cover cursor-pointer" preload="metadata">
-                        <source src="assets/videos/video2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                
-                <div class="relative group overflow-hidden rounded-lg">
-                    <video class="w-full h-[32rem] object-cover cursor-pointer" preload="metadata">
-                        <source src="assets/videos/video3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="events" class="py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
-                Upcoming <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0266] to-[#14FFEC]">Events</span>
-            </h2>
-            
-            <div class="mb-12 overflow-x-auto">
-                <div class="flex justify-center min-w-max px-4">
-                    <div class="inline-flex rounded-md shadow-sm" role="group">
-                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium rounded-l-lg bg-[#FF0266] text-white whitespace-nowrap" data-filter="all">
-                            ALL CITIES
-                        </button>
-                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium bg-[#141414] text-white hover:bg-[#FF0266] transition-colors duration-300 whitespace-nowrap" data-filter="manchester">
-                            MANCHESTER
-                        </button>
-                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium bg-[#141414] text-white hover:bg-[#FF0266] transition-colors duration-300 whitespace-nowrap" data-filter="cardiff">
-                            CARDIFF
-                        </button>
-                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium bg-[#141414] text-white hover:bg-[#FF0266] transition-colors duration-300 whitespace-nowrap" data-filter="london">
-                            LONDON
-                        </button>
-                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium bg-[#141414] text-white hover:bg-[#FF0266] transition-colors duration-300 whitespace-nowrap" data-filter="uk">
-                            UK Tour
-                        </button>
-                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium bg-[#141414] text-white hover:bg-[#FF0266] transition-colors duration-300 whitespace-nowrap" data-filter="eu">
-                            EU Tour
-                        </button>
-                        <button type="button" class="filter-btn px-4 py-2 text-sm font-medium rounded-r-lg bg-[#141414] text-white hover:bg-[#FF0266] transition-colors duration-300 whitespace-nowrap" data-filter="australia">
-                            AUSTRALIA
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover" data-city="manchester">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/1.png" alt="Charra Tea & Actavia Present: Scissor Sisters" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-[#FF0266] text-white px-3 py-1 rounded-full text-xs font-bold">
-                                SALES ENDED
-                            </div>
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Charra Tea & Actavia Present: Scissor Sisters</h3>
-                                <span class="text-[#14FFEC] font-bold">From £11.55</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">Manchester • June 27</p>
-                            <p class="text-gray-300 mb-4">Fresh from the smash-hit season of RuPaul's Drag Race UK, audience favourites Charra Tea and Actavia are hitting the road with their electrifying new show: SCISSOR SISTERS — a 60-minute, high-energy cabaret experience like no other!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">Ages 18+</span>
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">A Brand New Cabaret Show</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/charra-tea-actavia-present-scissor-sisters-a-brand-new-cabaret-show-tickets-1373046762829?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover" data-city="cardiff">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/1.png" alt="Charra Tea & Actavia Present: Scissor Sisters" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Charra Tea & Actavia Present: Scissor Sisters</h3>
-                                <span class="text-[#14FFEC] font-bold">From £11.55</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">Cardiff • July 30</p>
-                            <p class="text-gray-300 mb-4">Fresh from the smash-hit season of RuPaul's Drag Race UK, audience favourites Charra Tea and Actavia are hitting the road with their electrifying new show: SCISSOR SISTERS — a 60-minute, high-energy cabaret experience like no other!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">Ages 18+</span>
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">A Brand New Cabaret Show</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/charra-tea-actavia-present-scissor-sisters-cardiff-tickets-1407614696449?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover" data-city="london">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/1.png" alt="Charra Tea & Actavia Present: Scissor Sisters" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Charra Tea & Actavia Present: Scissor Sisters</h3>
-                                <span class="text-[#14FFEC] font-bold">From £11.55</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">London • July 31</p>
-                            <p class="text-gray-300 mb-4">Fresh from the smash-hit season of RuPaul's Drag Race UK, audience favourites Charra Tea and Actavia are hitting the road with their electrifying new show: SCISSOR SISTERS — a 60-minute, high-energy cabaret experience like no other!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">Ages 18+</span>
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">A Brand New Cabaret Show</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/charra-tea-actavia-present-scissor-sisters-london-tickets-1407619771629?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover" data-city="uk">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/2.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">Slay Glasgow • August 6</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/dfiu-events-presents-haus-of-aja-glasgow-tickets-1368800472059?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover" data-city="uk">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/3.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">The Foundry Torquay • August 8</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/dfiu-events-presents-the-haus-of-aja-torquay-tickets-1388194760899?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover" data-city="uk">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/4.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £25.00</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">The Glee Club Cardiff • August 10</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.glee.co.uk/performer/the-haus-of-aja/?location=2" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover" data-city="uk">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/5.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £25.00</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">The Glee Club Leeds • August 13</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.glee.co.uk/performer/the-haus-of-aja/?location=18" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover" data-city="uk">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/7.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">The Clapham Grand London • August 15</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/dfiu-events-presents-the-haus-of-aja-london-tickets-1388287347829?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover" data-city="uk">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/8.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">Cruz 101 Manchester • August 16</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/dfiu-events-presents-the-haus-of-aja-manchester-tickets-1388293415979?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover" data-city="eu">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/9.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">La Mari Queen Madrid • August 22</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/dfiu-events-presents-the-haus-of-aja-madrid-tickets-1388303857209?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#14FFEC]/30 card-hover" data-city="eu">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/10.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">Red Bologna Bologna • August 23</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/dfiu-events-presents-the-haus-of-aja-bologna-tickets-1388317026599?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#B10DC9]/30 card-hover" data-city="eu">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/11.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">Panama Amsterdam • August 24</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.eventbrite.co.uk/e/dfiu-events-presents-the-haus-of-aja-amsterdam-tickets-1388296234409?aff=oddtdtcreator" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card bg-[#141414] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#FF0266]/30 card-hover" data-city="australia">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/3 relative">
-                            <img src="assets/events/12.jpg" alt="Haus of Aja" class="w-full h-full object-cover">
-                        </div>
-                        <div class="md:w-2/3 p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Haus of Aja</h3>
-                                <span class="text-[#14FFEC] font-bold">From £27.80</span>
-                            </div>
-                            <p class="text-[#14FFEC] mb-4">Melbourne • Nov 20 | Adelaide • Nov 21 | Sydney • Nov 22 | Brisbane • Nov 23</p>
-                            <p class="text-gray-300 mb-4">Join us at DFIU Events Presents: Haus of Aja in Glasgow for a night of fierce performances and fabulous drag!</p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex space-x-2">
-                                    <span class="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-xs">ALL AGES</span>
-                                </div>
-                                <a href="https://www.itdevents.com/" target="_blank" class="gradient-btn text-black font-bold py-2 px-6 rounded-full text-sm uppercase tracking-wider">
-                                    GET TICKETS
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 px-6 bg-gradient-to-r from-[#0A0A0A] to-[#141414] border-glow">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Stay <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0266] to-[#14FFEC]">Connected</span>
-            </h2>
-            <p class="text-lg mb-10 max-w-2xl mx-auto">
-                Subscribe to our newsletter for exclusive event announcements, presale codes, and behind-the-scenes content.
-            </p>
-            
-            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input type="text" placeholder="Your Name" class="flex-grow px-4 py-3 rounded-full bg-[#141414] text-white border border-[#333] focus:outline-none focus:border-[#FF0266]">
-                <input type="email" placeholder="Your Email" class="flex-grow px-4 py-3 rounded-full bg-[#141414] text-white border border-[#333] focus:outline-none focus:border-[#FF0266]">
-                <button type="submit" class="gradient-btn text-black font-bold py-3 px-8 rounded-full uppercase tracking-wider">
-                    Subscribe
-                </button>
-            </form>
+        <div class="text-center mt-12">
+            <button id="toggleRosterBtn" class="neon-btn px-8 py-3 rounded-full bg-transparent border border-white text-white font-bold hover:bg-white hover:text-black">
+                VIEW FULL ROSTER
+            </button>
         </div>
     </section>
 
-    <footer class="py-12 px-6 bg-[#0A0A0A] border-t border-[#333]">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <img src="assets/logo.png" alt="DFIU EVENTS Logo" class="h-16 mb-4">
-                    <p class="text-gray-400">
-                        Unleashing Sound. Uniting Cities.
-                    </p>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center neon-heading neon-purple">GALLERY</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Items -->
+                <div class="gallery-item relative group rounded-lg overflow-hidden">
+                    <img src="assets/photos/1.jpg" alt="Gallery" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <button class="lightbox-btn text-white text-3xl" data-image="assets/photos/1.jpg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-bold mb-4 text-white">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-[#FF0266] transition-colors duration-300">Home</a></li>
-                        <li><a href="#roster" class="text-gray-400 hover:text-[#FF0266] transition-colors duration-300">Roster</a></li>
-                        <li><a href="#gallery" class="text-gray-400 hover:text-[#FF0266] transition-colors duration-300">Gallery</a></li>
-                        <li><a href="#events" class="text-gray-400 hover:text-[#FF0266] transition-colors duration-300">Events</a></li>
-                    </ul>
+                <div class="gallery-item relative group rounded-lg overflow-hidden">
+                    <img src="assets/photos/2.jpg" alt="Gallery" class="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-105" style="object-position: center 30%;">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <button class="lightbox-btn text-white text-3xl" data-image="assets/photos/2.jpg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-bold mb-4 text-white">Contact Us</h4>
-                    <ul class="space-y-2">
-                        <li class="text-gray-400">
-                            <i class="fas fa-envelope mr-2 text-[#14FFEC]"></i>
-                            bookings@dfiuevents.com
-                        </li>
-                    </ul>
+                <div class="gallery-item relative group rounded-lg overflow-hidden">
+                    <img src="assets/photos/3.jpg" alt="Gallery" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105" style="object-position: center 40%;">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <button class="lightbox-btn text-white text-3xl" data-image="assets/photos/3.jpg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative group rounded-lg overflow-hidden">
+                    <img src="assets/photos/4.jpg" alt="Gallery" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <button class="lightbox-btn text-white text-3xl" data-image="assets/photos/4.jpg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-bold mb-4 text-white">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/DFIUEvents/" target="_blank" class="text-gray-400 hover:text-[#FF0266] transition-colors duration-300 text-xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/dfiuevents/" target="_blank" class="text-gray-400 hover:text-[#FF0266] transition-colors duration-300 text-xl">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                <div class="gallery-item relative group rounded-lg overflow-hidden">
+                    <img src="assets/photos/5.jpg" alt="Gallery" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105" style="object-position: center 40%;">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <button class="lightbox-btn text-white text-3xl" data-image="assets/photos/5.jpg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item relative group rounded-lg overflow-hidden">
+                    <img src="assets/photos/6.jpg" alt="Gallery" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105" style="object-position: center 30%;">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <button class="lightbox-btn text-white text-3xl" data-image="assets/photos/6.jpg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-[#333] mt-12 pt-8 text-center text-gray-500">
-                <p>©2021 by DFIU Events.</p>
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/dfiuevents/" target="_blank" 
+                class="neon-btn inline-block px-8 py-3 rounded-full bg-transparent border border-white text-white font-bold hover:bg-white hover:text-black transition">
+                    VIEW MORE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
+        <div class="relative max-w-4xl w-full">
+            <button id="close-lightbox" class="absolute -top-12 right-0 text-white text-3xl">&times;</button>
+            <img id="lightbox-image" src="" alt="" class="w-full max-h-[80vh] object-contain">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="assets/logo.png" alt="DFIU EVENTS Logo"
+                    class="h-36 mx-auto mb-4 neon-heading neon-cyan">
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/DFIUEvents/" target="_blank" rel="noopener noreferrer" 
+                    class="text-gray-400 hover:text-cyan-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/dfiuevents/" target="_blank" rel="noopener noreferrer" 
+                    class="text-gray-400 hover:text-purple-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 mb-2">Subscribe to our newsletter</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        <button class="neon-btn px-4 py-2 bg-cyan-500 text-black font-bold rounded-r hover:bg-cyan-600">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2021 DFIU EVENTS. All rights reserved.</p>
+                <p class="text-gray-500 text-xs mt-2">Built by <a href="https://thefreewebsitewizards.com/?fbclid=PAZXh0bgNhZW0CMTEAAad0Jm-GNlXnPPJ1LVG1DBVBoUGdRHC5m3FFwUqGHjUfujAnDPDhsINN8mAv1A_aem_owWh2qpkEErFPYCqV9cPEg" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">The Free Website Wizards</a></p>
             </div>
         </div>
     </footer>
-    
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col px-6 py-4 hidden">
+        <div class="flex items-center justify-between mb-8">
+            <img src="assets/logo.png" alt="Logo" class="h-10">
+            <button id="close-mobile-menu" class="text-white text-3xl font-bold">
+                &times;
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-6 text-white text-lg font-bold">
+            <a href="#home" class="hover:text-cyan-300 transition">Home</a>
+            <a href="#events" class="hover:text-magenta-300 transition">Events</a>
+            <a href="#roster" class="hover:text-purple-300 transition">Roster</a>
+            <a href="#gallery" class="hover:text-green-300 transition">Gallery</a>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openMenu = document.getElementById('open-mobile-menu');
+            const closeMenu = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (openMenu && closeMenu && mobileMenu) {
+                openMenu.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                closeMenu.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+            } else {
+                console.warn('One or more mobile menu elements not found.');
+            }
+        });
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const rosterCards = document.querySelectorAll('.roster-card');
+        const toggleBtn = document.getElementById('toggleRosterBtn');
+        let expanded = false;
+
+        function updateRosterDisplay() {
+            rosterCards.forEach((card, index) => {
+                if (!expanded && index >= 4) {
+                    card.classList.add('hidden');
+                } else {
+                    card.classList.remove('hidden');
+                }
+            });
+
+            toggleBtn.textContent = expanded ? 'VIEW LESS' : 'VIEW FULL ROSTER';
+
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            expanded = !expanded;
+            updateRosterDisplay();
+        });
+
+        // Initial setup
+        updateRosterDisplay();
+    });
+</script>
+
+<!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
