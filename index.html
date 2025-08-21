@@ -788,20 +788,27 @@
     </footer>
 
     <!-- MOBILE MENU -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col px-6 py-4 hidden">
-        <div class="flex items-center justify-between mb-8">
-            <img src="assets/logo.png" alt="Logo" class="h-10">
-            <button id="close-mobile-menu" class="text-white text-3xl font-bold">
-                &times;
-            </button>
-        </div>
-        <nav class="flex flex-col space-y-6 text-white text-lg font-bold">
-            <a href="#home" class="hover:text-cyan-300 transition">Home</a>
-            <a href="#events" class="hover:text-magenta-300 transition">Events</a>
-            <a href="#roster" class="hover:text-purple-300 transition">Roster</a>
-            <a href="#gallery" class="hover:text-green-300 transition">Gallery</a>
-        </nav>
+    <!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col px-6 py-4 w-full overflow-x-hidden hidden">
+    <div class="flex items-center justify-between mb-8 w-full">
+        <!-- Logo -->
+        <img src="assets/logo.png" alt="Logo" class="h-10">
+
+        <!-- Close Button -->
+        <button id="close-mobile-menu" class="text-white text-3xl font-bold">
+            &times;
+        </button>
     </div>
+
+    <!-- Menu Links -->
+    <nav class="flex flex-col space-y-6 text-white text-lg font-bold">
+        <a href="#home" class="hover:text-cyan-300 transition">Home</a>
+        <a href="#events" class="hover:text-magenta-300 transition">Events</a>
+        <a href="#roster" class="hover:text-purple-300 transition">Roster</a>
+        <a href="#gallery" class="hover:text-green-300 transition">Gallery</a>
+    </nav>
+</div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const openMenu = document.getElementById('open-mobile-menu');
